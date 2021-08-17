@@ -1,0 +1,333 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "HTTPChannel",
+    "version" : 10,
+    "contact" : {
+      "name" : "HTTPChannel"
+    }
+  },
+  "servers" : [ {
+    "url" : "http://localhost:8110"
+  }, {
+    "url" : "https://localhost:8110"
+  } ],
+  "tags" : [ {
+    "name" : "/Channels/HTTP",
+    "description" : "Decribe http method"
+  } ],
+  "paths" : {
+    "/Channels/HTTP/PostEmpl" : {
+      "post" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "description" : "post employee method",
+        "summary" : "post employee method",
+        "operationId" : "/Events/PostEmpl",
+        "parameters" : [ {
+          "name" : "EmplID",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        }, {
+          "name" : "EmployeeName",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "CompanyName",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Address",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "City",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "State",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Zip",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/PostEmpl",
+                "x-conceptPath" : "PostEmpl",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "COMPLEX_TYPE",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/ComplexSchema",
+                "x-payloadString" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<payload>\n    <xs:element xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"root\">\n        <xs:complexType>\n            <xs:sequence/>\n        </xs:complexType>\n    </xs:element>\n</payload>"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "Success Response"
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "description" : "post employee method",
+        "summary" : "post employee method",
+        "operationId" : "/Events/PostEmpl",
+        "parameters" : [ {
+          "name" : "EmplID",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        }, {
+          "name" : "EmployeeName",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "CompanyName",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Address",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "City",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "State",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Zip",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/xml" : {
+              "schema" : {
+                "type" : "object",
+                "$ref" : "#/components/schemas/PostEmpl",
+                "x-conceptPath" : "PostEmpl",
+                "x-historyPolicy" : 0,
+                "x-historySize" : 0,
+                "x-event-payloadtype" : "COMPLEX_TYPE",
+                "x-nameSpace" : "http://tibco.com/qa/xsd/ComplexSchema",
+                "x-payloadString" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<payload>\n    <xs:element xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" name=\"root\">\n        <xs:complexType>\n            <xs:sequence/>\n        </xs:complexType>\n    </xs:element>\n</payload>"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "default" : {
+            "description" : "Success Response"
+          }
+        }
+      }
+    },
+    "/Channels/HTTP/GetEmplInfo" : {
+      "get" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "description" : "Get Emp Info",
+        "summary" : "Get Emp Info",
+        "operationId" : "/Events/GetEmplInfo",
+        "parameters" : [ {
+          "name" : "EmplID",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "Success Response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetEmplInfoResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "description" : "Get Emp Info",
+        "summary" : "Get Emp Info",
+        "operationId" : "/Events/GetEmplInfo",
+        "parameters" : [ {
+          "name" : "EmplID",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "Success Response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetEmplInfoResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "description" : "Get Emp Info",
+        "summary" : "Get Emp Info",
+        "operationId" : "/Events/GetEmplInfo",
+        "parameters" : [ {
+          "name" : "EmplID",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "Success Response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetEmplInfoResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "/Channels/HTTP" ],
+        "description" : "Get Emp Info",
+        "summary" : "Get Emp Info",
+        "operationId" : "/Events/GetEmplInfo",
+        "parameters" : [ {
+          "name" : "EmplID",
+          "in" : "query",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "default" : {
+            "description" : "Success Response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetEmplInfoResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "PostEmpl" : {
+        "type" : "object",
+        "properties" : {
+          "EmplID" : {
+            "type" : "integer",
+            "format" : "int32"
+          },
+          "EmployeeName" : {
+            "type" : "string"
+          },
+          "CompanyName" : {
+            "type" : "string"
+          },
+          "Address" : {
+            "type" : "string"
+          },
+          "City" : {
+            "type" : "string"
+          },
+          "State" : {
+            "type" : "string"
+          },
+          "Zip" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      },
+      "GetEmplInfo" : {
+        "type" : "object",
+        "properties" : {
+          "EmplID" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      },
+      "GetEmplInfoResponse" : {
+        "type" : "object",
+        "properties" : {
+          "EmplID" : {
+            "type" : "integer",
+            "format" : "int32"
+          }
+        }
+      }
+    }
+  }
+}
